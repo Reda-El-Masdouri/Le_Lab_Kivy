@@ -1,4 +1,16 @@
-StackLayoutExemple:
+PageLayoutExemple:
+
+
+<PageLayoutExemple@PageLayout>:
+    MainWidget:
+    BoxLayoutExemple:
+    AnchorLayoutExemple:
+    GridLayoutExemple:
+
+<ScrollViewExemple@ScrollView>:
+    StackLayoutExemple:
+        size_hint: 1, None
+        height: self.minimum_height
 
 <StackLayoutExemple>:
     # "left-right" or "top-bottom"
@@ -35,7 +47,7 @@ StackLayoutExemple:
     Button:
         text: "F"
 
-<AnchorLayoutExemple>:
+<AnchorLayoutExemple@AnchorLayout>:
     # anchor_x: "right", "left", "center"
     # anchor_y: "top", "bottom", "center"
     anchor_x: "left"
