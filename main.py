@@ -1,15 +1,28 @@
+from cgitb import text
+from turtle import st
 from kivy.uix.button import Button
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.anchorlayout import AnchorLayout
-
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.stacklayout import StackLayout
+from kivy.metrics import dp
+from numpy import size
 
 class MainWidget(Widget):
     pass
 
-class AnchorLayoutExemple(AnchorLayout):
+class GridLayoutExemple(GridLayout):
     pass
+
+class StackLayoutExemple(StackLayout):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.orientation = "lr-tb"
+        for i in range(40):
+            b = Button(text=str(i+1), size_hint=(None, None), size=(dp(60),dp(60)))
+            self.add_widget(b)
 
 class BoxLayoutExemple(BoxLayout):
     """def __init__(self, **kwargs):

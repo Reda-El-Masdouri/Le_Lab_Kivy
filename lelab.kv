@@ -1,4 +1,39 @@
-AnchorLayoutExemple:
+StackLayoutExemple:
+
+<StackLayoutExemple>:
+    # "left-right" or "top-bottom"
+    #orientation: "rl-bt"
+    # padding: (gauche, haut, droit, bas)
+    padding: ("20dp", "10dp", "100dp", "20dp")
+    spacing: "20dp", "20dp"
+    Button:
+        size_hint: .5, .2
+        text: "A"
+    Button:
+        size_hint: .5, .2
+        text: "B"
+    Button:
+        size_hint: .5, .2
+        text: "C"
+
+
+<GridLayoutExemple>:
+    # spacing: "10dp"
+    # rows, cols
+    rows: 2
+    Button:
+        size_hint: .5, 1
+        text: "A"
+    Button:
+        text: "B"
+    BoxLayoutExemple:
+    Button:
+        size_hint: .5, 1
+        text: "D"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
 
 <AnchorLayoutExemple>:
     # anchor_x: "right", "left", "center"
