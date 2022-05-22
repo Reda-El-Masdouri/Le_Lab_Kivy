@@ -2,9 +2,13 @@ from kivy.uix.button import Button
 from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.anchorlayout import AnchorLayout
 
 
 class MainWidget(Widget):
+    pass
+
+class AnchorLayoutExemple(AnchorLayout):
     pass
 
 class BoxLayoutExemple(BoxLayout):
