@@ -16,7 +16,7 @@ class MainWidget(Widget):
 
 class WidgetExemple(GridLayout):
     mon_texte = StringProperty("0")
-    slider_value_txt = StringProperty("0")
+    #slider_value_txt = StringProperty("Valeur")
     compteur_actif = BooleanProperty(False)
     compteur = 1
     
@@ -37,9 +37,9 @@ class WidgetExemple(GridLayout):
             self.compteur_actif = True
     def on_switch_active(self, widget):
         print("Switch: "+ str(widget.active))
-    def on_value_slider(self, widget):
-        print("The value is:" +str(int(widget.value)))
-        self.slider_value_txt = str(int(widget.value))
+    #def on_value_slider(self, widget):
+    #    print("The value is:" +str(int(widget.value)))
+        #self.slider_value_txt = str(int(widget.value))
             
 
 class GridLayoutExemple(GridLayout):
