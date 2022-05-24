@@ -1,0 +1,119 @@
+
+
+<PageLayoutExemple@PageLayout>:
+    MainWidget:
+    BoxLayoutExemple:
+    AnchorLayoutExemple:
+    GridLayoutExemple:
+
+<ScrollViewExemple@ScrollView>:
+    StackLayoutExemple:
+        size_hint: 1, None
+        height: self.minimum_height
+
+<StackLayoutExemple>:
+    # "left-right" or "top-bottom"
+    #orientation: "rl-bt"
+    # padding: (gauche, haut, droit, bas)
+    padding: ("20dp", "10dp", "100dp", "20dp")
+    spacing: "20dp", "20dp"
+    Button:
+        size_hint: .5, .2
+        text: "A"
+    Button:
+        size_hint: .5, .2
+        text: "B"
+    Button:
+        size_hint: .5, .2
+        text: "C"
+
+
+<GridLayoutExemple>:
+    # spacing: "10dp"
+    # rows, cols
+    rows: 2
+    Button:
+        size_hint: .5, 1
+        text: "A"
+    Button:
+        text: "B"
+    BoxLayoutExemple:
+    Button:
+        size_hint: .5, 1
+        text: "D"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+
+<AnchorLayoutExemple@AnchorLayout>:
+    # anchor_x: "right", "left", "center"
+    # anchor_y: "top", "bottom", "center"
+    anchor_x: "left"
+    anchor_y: "top"
+    BoxLayout:
+        orientation: "vertical"
+        size_hint: .1, .1
+        Button:
+            text: "A"
+        Button:
+            text: "B"
+    AnchorLayout:
+        anchor_x: "center"
+        anchor_y: "bottom"
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: .1, .1
+            Button:
+                text: "C"
+
+        
+
+
+
+
+
+
+
+
+<BoxLayoutExemple>:
+    orientation: "vertical"
+    spacing: "10dp"
+    Button:
+        text: "A"
+        size_hint: 0.5, 0.5
+        # x, right, center_x
+        # y, top, center_y (orientation: "horizontal")
+        pos_hint: { "center_x": 0.5 }
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "R"
+        Button:
+            text: "E"
+        Button:
+            text: "D"
+        Button:
+            text: "A"    
+    Button:
+        text: "B"
+        size_hint: 1, None
+        height: "100dp"
+    Button:
+        text: "C"
+        size_hint: None, None
+        size: "100dp", "60dp"
+    Label:
+        text: "D"
+
+<MainWidget>:
+    Button:
+        text: "Hello"
+        size: "100dp", "60dp"
+        pos: "200dp", "100dp"
+        color: 0, 0, 1, 1
+    Label:
+        text: "Hello2"
+        size: "100dp", "60dp"
+        pos: "400dp", "200dp"
+        color: 1, .2, .2, 1
