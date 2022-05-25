@@ -1,30 +1,29 @@
 #:import layout_exemples layout_exemples
 #:import widget_exemples widget_exemples
 #:import navigation_screen_manager navigation_screen_manager
+#:import boxlayout_with_action_bar boxlayout_with_action_bar
 
 
-MyScreenManager:
-
-<MyScreenManager@NavigationScreenManager>:
+<MyScreenManager>:
     Screen:
         name: "screen1"
         BoxLayout:
             Button:
-                text: "Allez à l'écran 2"
-                on_press: root.push("screen2")
+                text: "Allez à l'écran des images"
+                on_press: app.manager.push("ImagesExemple")
             Button:
                 text: "Allez à l'écran 3"
-                on_press: root.push("screen3")
+                on_press: app.manager.push("screen3")
     Screen:
-        name: "screen2"
-        Button:
-            text: "Ecran 2"
-            on_press: root.pop()
+        name: "ImagesExemple"
+        BoxLayoutWithActionBar:
+            title: "Images"
+            ImagesExemple:
     Screen:
         name: "screen3"
         Button:
             text: "Ecran 3"
-            on_press: root.pop()
+            on_press: app.manager.pop()
 
 
 
