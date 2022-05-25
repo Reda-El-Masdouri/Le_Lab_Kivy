@@ -16,6 +16,8 @@ from navigation_screen_manager import NavigationScreenManager
      
 class MyScreenManager(NavigationScreenManager):
     pass
+class MenuPrincipal(BoxLayout):
+    pass
 
 class LelabApp(App):
     manager = ObjectProperty(None)
