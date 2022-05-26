@@ -11,6 +11,7 @@ from kivy.uix.stacklayout import StackLayout
 from kivy.metrics import dp
 from numpy import size
 from kivy.properties import StringProperty, BooleanProperty, ObjectProperty
+from canvas_exemple import *
 from navigation_screen_manager import NavigationScreenManager
 
      
@@ -23,7 +24,8 @@ class LelabApp(App):
     manager = ObjectProperty(None)
     def build(self):
         self.manager = MyScreenManager()
-        return self.manager
+        #return self.manager
+        return CanvasExemple3()
 
 
 LelabApp().run()
