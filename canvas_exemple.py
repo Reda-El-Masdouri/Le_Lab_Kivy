@@ -25,7 +25,12 @@ class CanvasExemple4(Widget):
             Line(rectangle=(200,150,150,100), width=5)
             self.rect = Rectangle(pos=(500,300), size=(150,100))
     def on_press_button_a_click(self):
+        a, b = self.rect.size
         x, y = self.rect.pos
-        x += dp(10)
+        inc = dp(10)
+        diff = self.width - (x+a)
+        if diff < inc:
+            inc = diff
+        x += inc
         self.rect.pos = (x, y)
-            
+        
