@@ -65,3 +65,6 @@ class CanvasExemple5(Widget):
             x = 0
             self.vx = -self.vx
         self.ball.pos = (x,y)
+
+class CanvasExemple6(Widget):
+    pass
