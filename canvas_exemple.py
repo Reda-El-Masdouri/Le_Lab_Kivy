@@ -1,4 +1,5 @@
 from kivy.uix.widget import Widget
+from kivy.uix.boxlayout import BoxLayout
 from kivy.graphics.vertex_instructions import Line, Rectangle, Ellipse
 from kivy.graphics.context_instructions import Color
 from kivy.metrics import dp
@@ -67,4 +68,7 @@ class CanvasExemple5(Widget):
         self.ball.pos = (x,y)
 
 class CanvasExemple6(Widget):
+    pass
+
+class CanvasExemple7(BoxLayout):
     pass
