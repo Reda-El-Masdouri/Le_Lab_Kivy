@@ -2,6 +2,7 @@
 #:import widget_exemples widget_exemples
 #:import navigation_screen_manager navigation_screen_manager
 #:import boxlayout_with_action_bar boxlayout_with_action_bar
+#:import canvas_exemple canvas_exemple
 
 
 <MenuPrincipal@BoxLayout>:
@@ -16,6 +17,9 @@
         Button:
             text: "images"    
             on_press: app.manager.push("ImagesExemple")
+        Button:
+            text: "Canvas"    
+            on_press: app.manager.push("CanvasExemple")
 
 
 
@@ -38,6 +42,13 @@
         BoxLayoutWithActionBar:
             title: "Widgets"
             WidgetExemple:
+            
+    Screen:
+        name: "CanvasExemple"
+        BoxLayoutWithActionBar:
+            title: "Canvas"
+            CanvasexempleTab:
+            
     
 
 
